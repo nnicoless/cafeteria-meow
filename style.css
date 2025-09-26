@@ -1,83 +1,104 @@
 :root {
-    --fundo: #E5D7C4;
-    --marrom-claro: #743E17;
-    --marrom-principal: #351c0a;
-    --verde: #366638;
+  --fundo: #E5D7C4;
+  --marrom-claro: #743E17;
+  --marrom-principal: #351c0a;
+  --verde: #366638;
+}
+
+@font-face {
+  font-family: "Narnia";
+  src: url("Narnia.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Arsenica";
+  src: url("ArsenicaTrial-Medium.ttf") format("truetype");
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--fundo);
-    font-family: Arial, sans-serif;
-    height: 100vh;
+  background-color: var(--fundo);
+  font-family: "Raleway", sans-serif;
 }
-
 
 header {
-    width: 100%;
-    height: 80px;
-    background-color: var(--verde);
-    color: var(--fundo);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 40px;
-    padding: 0 40px;
+  width: 100%;
+  height: 80px;
+  background-color: var(--verde);
+  color: var(--fundo);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
 }
 
-header p {
-    font-size: 1.2rem;
-    cursor: pointer;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+}
+
+nav a {
+  color: var(--fundo);
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-left: 40px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: calc(100vh - 80px); /* tela inteira menos o header */
-    padding: 0 60px;
-    margin: 0%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 80px);
+  padding: 0 60px;
 }
 
 .texto {
-    justify-content:flex-start;
-    display: inline;
+  max-width: 50%;
 }
 
-.texto h2 {
-    color: var(--marrom-claro);
-    font-size: 3rem;
-    justify-content:center;
+.titulo-principal h2 {
+  font-family: "Arsenica", serif;
+  color: var(--marrom-claro);
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
-.texto h1 {
-    color: var(--marrom-principal);
-    font-size: 5rem;
-    margin: 10px 0;
+.titulo-principal h1 {
+  font-family: "Narnia", serif;
+  color: var(--marrom-principal);
+  font-size: 5.5rem;
+  margin-bottom: 20px;
 }
 
-.texto p {
-    font-size: 1.5rem;
-    margin: 20px 0;
+.menores {
+  margin-top: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
 }
 
-.texto h6 {
-    margin-top: 30px;
-    font-size: 1.2rem;
-    font-weight: normal;
+.menores p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+
 }
 
-img {
-
-    display: flex;
-    justify-content:flex-end;
-    width: 60%; 
-    height: 80%;  
-    object-fit: contain;
-    margin-left: 20vh;
+.menores h6 {
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--marrom-principal);
+  margin-bottom: 10%;
 }
+
+.imagem img { 
+    width: 100%; 
+    height: 100%; 
+    margin-left: 9vh; 
+    margin-top: 10vh; }
