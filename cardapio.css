@@ -1,0 +1,169 @@
+:root {
+--card: #dac7ae;
+  --marrom-claro: #743E17;
+  --marrom-principal: #351c0a;
+  --verde: #366638;
+  --fundo: #ecdfc7;
+
+}
+
+@font-face {
+  font-family: "Narnia";
+  src: url("Narnia.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Arsenica";
+  src: url("ArsenicaTrial-Medium.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--fundo);
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: var(--verde);
+  color: var(--fundo);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+}
+
+nav a {
+  color: var(--fundo);
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-left: 40px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+}
+
+nav a:hover{
+   transform: scale(1.5);
+   color: var(--marrom-principal);
+   font-family: "raleway";
+   font-weight: bold;
+  text-shadow: 0 8px 20px;
+}
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 4rem;
+    font-weight: 200;
+    font-family: "Narnia", serif;
+    color: #351c0a;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 40px;
+    padding: 12px 0;
+}
+
+.menu a {
+    color: var(--marrom-claro);
+    font-family: "Raleway";
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.menu a:hover {
+  transform: scale(1.2);
+  color: var(--marrom-principal);
+  text-shadow: 0 8px 50px;
+}
+
+.menu-link {
+  text-decoration: none;
+  color:var(--marrom-principal);
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.menu-link:hover {
+  color:var(--marrom-claro);
+}
+
+.cardapio-section {
+  display: none;
+  padding: 30px;
+  text-align: center;
+}
+
+.cardapio-section:not(.hidden) {
+  display: block;
+}
+
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 25px; 
+  margin-top: 20px;
+  margin: 0 auto;
+}
+
+.produto {
+  text-align: center;
+  cursor: pointer ;
+  transition: transform 0.2s;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+  background-color: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.produto img {
+  height: 180px;
+    width: 100%; 
+    object-fit: contain;                          
+  border-radius: 10px;
+}
+
+.diferentes  {
+   margin-top: 8px;
+  width: 100%;                     
+  object-fit: contain;       
+  border-radius: 10px;
+}
+
+.produto h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.produto p {
+  font-family: "raleway", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--marrom-principal);
+}

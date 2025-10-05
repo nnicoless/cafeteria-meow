@@ -1,10 +1,11 @@
 :root {
-  --fundo: #E5D7C4;
+--card: #dac7ae;
   --marrom-claro: #743E17;
   --marrom-principal: #351c0a;
   --verde: #366638;
-}
+  --fundo: #ecdfc7;
 
+}
 @font-face {
   font-family: "Narnia";
   src: url("Narnia.ttf") format("truetype");
@@ -26,7 +27,7 @@ body {
   font-family: "Raleway", sans-serif;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* garante footer embaixo */
+  min-height: 100vh; 
 }
 
 header {
@@ -55,8 +56,17 @@ nav a {
   font-family: "Raleway", sans-serif;
 }
 
+nav a:hover{
+   transform: scale(1.5);
+   color: var(--marrom-principal);
+   font-family: "raleway";
+   font-weight: bold;
+  text-shadow: 0 8px 20px;
+}
+
+
 .container {
-  flex: 1; /* ocupa o espaço entre header e footer */
+  flex: 1; 
   display: flex;
   justify-content: space-between;
   align-items: center;
