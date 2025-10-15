@@ -22,8 +22,13 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: var(--fundo);
+  body {
+  background-image: url('imagens/fundo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  height: 100vh;
+  margin: 0;
   font-family: "Raleway", sans-serif;
   display: flex;
   flex-direction: column;
@@ -41,10 +46,10 @@ header {
   padding: 0 60px;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: "Raleway", sans-serif;
+.logo img {
+  height: 50px;
+  width: auto;
+  align-items: flex-start;
 }
 
 nav a {
@@ -64,24 +69,24 @@ nav a:hover{
   text-shadow: 0 8px 20px;
 }
 
-
 .container {
-  flex: 1; 
+  flex: 2; 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 0 60px;
 }
 
 .texto {
+  text-align: center;
   max-width: 50%;
 }
 
 .titulo-principal h2 {
+  text-align: center;
   font-family: "Arsenica", serif;
   color: var(--marrom-claro);
   font-size: 3rem;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .titulo-principal h1 {
@@ -89,6 +94,7 @@ nav a:hover{
   color: var(--marrom-principal);
   font-size: 5.5rem;
   margin-bottom: 20px;
+  margin-top: 0px;
 }
 
 .menores {
@@ -102,27 +108,18 @@ nav a:hover{
   margin-bottom: 20px;
 }
 
-.imagem {
-  flex: 1; 
-  display: flex;
+
+.footer {
+  font-family: "raleway", sans-serif;
+  font-weight: 600;
   justify-content: center;
-  align-items: center;
-}
-
-.imagem img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-}
-
-footer {
-  background-color: var(--verde);
-  color: var(--fundo);
   text-align: center;
-  padding: 15px;
-  font-size: 1rem;
+  padding: 15px 60px;
+  z-index: 1000; 
 }
-footer a {
-  color: var(--fundo);
-  text-decoration: underline;
+
+
+.footer p:hover {;
+  color: var(--marrom-principal);
+  text-shadow: 0 8px 50px;
 }

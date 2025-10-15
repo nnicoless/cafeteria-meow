@@ -6,7 +6,6 @@
   --fundo: #ecdfc7;
 
 }
-
 @font-face {
   font-family: "Narnia";
   src: url("Narnia.ttf") format("truetype");
@@ -22,7 +21,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+ 
 body {
   background-color: var(--fundo);
   font-family: "Raleway", sans-serif;
@@ -42,10 +41,10 @@ header {
   padding: 0 60px;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: "Raleway", sans-serif;
+.logo img {
+  height: 50px;
+  width: auto;
+  align-items: flex-start;
 }
 
 nav a {

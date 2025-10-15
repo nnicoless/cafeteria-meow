@@ -11,78 +11,96 @@ links.forEach(link => {
 });
 
 
+const card = document.getElementById('card-detalhes');
+const fecharBtn = document.querySelector('.fechar');
+const cardNome = document.getElementById('card-nome');
+const cardDesc = document.getElementById('card-descricao');
 
-  const produtos = document.querySelectorAll('.produto');
-  const card = document.getElementById('card-detalhes');
-  const fecharBtn = document.querySelector('.fechar');
-  const cardNome = document.getElementById('card-nome');
-  const cardDesc = document.getElementById('card-descricao');
+const infosProdutos = {
+  espresso: {
+    nome: "Espresso",
+    descricao: "Café forte e concentrado, preparado sob pressão. Perfeito para quem gosta de intensidade.",
+  },
+  coado: {
+    nome: "Coado",
+    descricao: "Clássico café filtrado, com sabor suave e aroma marcante. Ideal para acompanhar bolos e pães.",
+  },
+  cappuccino: {
+    nome: "Cappuccino",
+    descricao: "Mistura cremosa de café espresso, leite vaporizado e espuma de leite, com toque de canela.",
+  },
+  latte: {
+    nome: "Latte",
+    descricao: "Café espresso com grande quantidade de leite vaporizado e uma fina camada de espuma.",
+  },
+  lattegelado: {
+    nome: "Latte Gelado",
+    descricao: "Latte servido com gelo, refrescante e suave.",
+  },
+  macchiato: {
+    nome: "Macchiato",
+    descricao: "Espresso 'manchado' com um pouco de espuma de leite",
+  },
+  affogato: {
+    nome: "Affogato",
+    descricao: "Espresso servido sobre uma bola de sorvete. Opções: Baunilha, Chocolate, Caramelo",
+  },
+  cafegelado: {
+    nome: "Café Gelado",
+    descricao: "Café coado ou espresso servido com gelo, podendo ser adoçado ou simples",
+  },
+  chapreto: {
+    nome: "Chá Preto",
+    descricao: "Encorpado e aromático, pode ser servido puro ou com açúcar.",
+  },
+  chaverde: {
+    nome: "Chá Verde",
+    descricao: "Chá leve e refrescante, com notas herbais e rico em antioxidantes; pode ser adoçado com mel",
+  },
 
+  chamate: {
+    nome: "Chá Mate",
+    descricao: "Tradicional e revigorante, combina bem com mel ou um toque de limão",
+  },
 
-  const infosCafe = {
-    espresso: {
-      nome: "Espresso",
-      descricao: "Café forte e concentrado, preparado sob pressão. Perfeito para quem gosta de intensidade.",
-    
-    },
-    coado: {
-      nome: "Coado",
-      descricao: "Clássico café filtrado, com sabor suave e aroma marcante. Ideal para acompanhar bolos e pães.",
+  chadecamomila: {
+    nome: "Chá De Camomila",
+    descricao: "Feito com flores secas, tem aroma suave e efeito calmante; pode ser adoçado com mel ou açúcar.",
+  },
 
-    },
-    cappuccino: {
-      nome: "Cappuccino",
-      descricao: "Mistura cremosa de café espresso, leite vaporizado e espuma de leite, com toque de canela.",
-  
-    },
-    latte: {
-      nome: "Latte",
-      descricao: "Café espresso com grande quantidade de leite vaporizado e uma fina camada de espuma.",
-    },
+   chadehortela: {
+    nome: "Chá De Hortelã",
+    descricao: "Refrescante e aromático, feito com folhas frescas de hortelã, pode acompanhar mel ou açúcar.",
+  },
 
-    lattegelado: {
-      nome: "Latte Gelado",
-      descricao: "Latte servido com gelo, refrescante e suave.",
-    },
+   chainfusao: {
+    nome: "Infusões De Frutas",
+    descricao: "Bebida quente e aromática, feita com misturas de frutas naturais. Sabores: Morango, limão, laranja e frutas vermelhas.",
+  },
 
-     macchiato: {
-      nome: "Macchiato",
-      descricao: "Espresso 'manchado' com um pouco de espuma de leite",
-    },
+   chagelado: {
+    nome: "Chá Gelado Especial",
+    descricao: "Refrescante e leve, servido com gelo. Sabores: limão, pêssego, maracujá, morango e laranja.",
+  },
 
-     affogato: {
-      nome: "Affogato",
-      descricao: "Espresso servido sobre uma bola de sorvete. Opções: Baunilha, Chocolate, Caramelo",
-    },
+    chacomleite: {
+    nome: "Chá Com Leite",
+    descricao: "Bebida feita com chá mate quente misturado ao leite, resultando em sabor suave e cremoso.",
+  },
+};
 
-     cafegelado: {
-      nome: "Café Gelado",
-      descricao: "Café coado ou espresso servido com gelo, podendo ser adoçado ou simples",
-    }
-  
-  };
+document.addEventListener('click', (e) => {
+  const produto = e.target.closest('.produto');
+  if (!produto) return;
 
-  produtos.forEach(produto => {
-    produto.addEventListener('click', () => {
-      const alt = produto.querySelector('img').alt.toLowerCase();
-      const info = infosCafe[alt];
-      if (info) {
-        cardNome.textContent = info.nome;
-        cardDesc.textContent = info.descricao;
-        card.style.display = 'flex';
-      }
-    });
-  });
+  const alt = produto.querySelector('img')?.alt.toLowerCase().replace(/\s/g,''); 
+  const info = infosProdutos[alt];
+  if (info) {
+    cardNome.textContent = info.nome;
+    cardDesc.textContent = info.descricao;
+    card.style.display = 'flex';
+  }
+});
 
-
-  fecharBtn.addEventListener('click', () => {
-    card.style.display = 'none';
-  });
-
-
-  window.addEventListener('click', e => {
-    if (e.target === card) {
-      card.style.display = 'none';
-    }
-  });
-
+fecharBtn.addEventListener('click', () => { card.style.display = 'none'; });
+window.addEventListener('click', e => { if (e.target === card) card.style.display = 'none'; });
