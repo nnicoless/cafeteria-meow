@@ -1,9 +1,9 @@
 :root {
---card: #dac7ae;
+--card:#bb9c74;
   --marrom-claro: #743E17;
   --marrom-principal: #351c0a;
   --verde: #366638;
-  --fundo: #ecdfc7;
+  --fundo: #ccb392;
 
 }
 @font-face {
@@ -32,15 +32,15 @@ body {
 
 header {
   width: 100%;
-  height: 80px;
-  background-color: var(--verde);
-  color: var(--fundo);
+  backdrop-filter: blur(3px);
+  background:#583c27;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 60px;
+  padding: 1rem 2rem;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.);
 }
-
 .logo img {
   height: 50px;
   width: auto;
@@ -127,6 +127,13 @@ h1 {
   margin: 0 auto;
 }
 
+.grid-produtoss {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 25px; 
+  margin-top: 20px;
+  margin: 0 auto;
+}
 .produto {
   text-align: center;
   cursor: pointer ;
