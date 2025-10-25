@@ -137,6 +137,88 @@ const infosProdutos = {
     nome: "Tapioca",
     descricao: "Massa leve feita de goma de mandioca, grelhada até ficar macia e levemente crocante. <br> <br> <strong>OPÇÕES: <br> Tradicionais:</strong> <br> Queijo; <br> Queijo e Presunto; <br> Frango com Requeijão; <br> Ovo com Queijo; <br> Atum com Maionese. <br> <strong>Especiais;</strong> <br> Tomate Seco com Manjericão; <br> Queijo Coalho com Mel; <br> Carne Seca com Requeijão. ",
   },
+
+   brownie: {
+    nome: "Brownie",
+    descricao: "Doce macio e denso, com textura úmida e sabor marcante de chocolate",
+  },
+
+   cookie: {
+    nome: "Cookie",
+    descricao: "Biscoito crocante por fora e macio por dentro, com pedaços de chocolate.",
+  },
+
+   bolosimples: {
+    nome: "Bolo Simples",
+    descricao: "Massa leve e fofinha, perfeita para acompanhar um café. <br> <br> <strong> OPÇÕES: </strong>  <br> Limão; <br> Laranja; <br> Fubá; <br> Chocolate; <br> Coco; <br> Cenoura"
+   },
+
+   bolorecheado: {
+    nome: "Bolo Recheado",
+    descricao: "Bolo macio com camadas cremosas, ideal para quem busca algo mais doce. <br> <br> <strong> OPÇÕES:</strong> <br> Chocolate; <br> Cenoura com chocolate; <br> Limão; <br> Morango; <br> Ninho; <br> Red Velvet; <br> Doce de leite."
+  },
+
+   cheesecake: {
+    nome: "Cheesecake",
+    descricao: "Sobremesa cremosa à base de queijo, servida sobre uma camada crocante de biscoito.",
+  },
+
+   tortadoce: {
+    nome: "Torta Doce",
+    descricao: "Massa leve e crocante com recheio cremoso e cobertura delicada. <br> <br> <strong> OPÇÕES: </strong> <br> Limão; <br> Maracujá; <br> Morango; <br> Chocolate; <br> Ninho Com Nutella.",
+  },
+
+   pudim: {
+    nome: "Pudim",
+    descricao: "Clássica sobremesa brasileira, coberta com calda dourada de caramelo.",
+  },
+
+   donut: {
+    nome: "Donut",
+    descricao: "Massa macia e frita em formato de argola, com cobertura doce. <br> <br> <strong>OPÇÕES:</strong> <br> Chocolate; <br> Doce de leite; <br> Morango; <br> Baunilha.",
+  },
+
+  cupcake: {
+    nome: "Cupcake",
+    descricao: "Mini bolo individual, macio e coberto com creme delicado.<br> <br> <strong>OPÇÕES:</strong> <br> Chocolate; <br> Baunilha; <br> Red Velvet; <br> Limão; <br> Morango.",
+  },
+
+  cinnamonroll: {
+    nome: "Cinnamon Roll",
+    descricao: "Pão doce enrolado com canela e açúcar, macio e coberto com glacê cremoso.",
+  },
+
+  panquecas: {
+    nome: "Panquecas",
+    descricao: "Massa leve e fofinha, servida em camadas, peifeita para acompanhar cobertura doce. <br> <br> <strong> CALDAS:</strong> <br> Mel; <br> Chocolate; <br> Doce de leite.",
+  },
+
+   tapiocadoce: {
+    nome: "Tapioca Doce",
+    descricao: "Massa leve feita de goma de mandioca, grelhada até ficar macia e levemente crocante. <br> <br> <strong>OPÇÕES:</strong> <br> Coco com leite condensado; <br> Banana com canela; <br> Morango com chocolate; <br> Doce de leite; <br> Nutella.",
+  },
+
+  chocolatequente: {
+    nome: "Chocolate Quente",
+    descricao: "Bebida cremosa e reconfortante, feita com leite e chocolate derretido",
+  },
+
+    smoothie: {
+    nome: "Smoothie",
+    descricao: "Mistura gelada e cremosa de frutas naturais, batidas com leite ou iogurte. <br> <br> <strong>OPÇÕES: <BR> </strong> Morango; <br> Frutas vermelhas; <br> Manga; <br> Maracujá; <br> Banana. "
+  },
+
+   suconatural: {
+    nome: "Suco Natural",
+    descricao: "Bebida refrescante feita com frutas frescas, sem conservantes. <br> <br> <strong>OPÇÕES: <BR> </strong> Morango; <br> Frutas vermelhas; <br> Manga; <br> Maracujá; <br> Laranja. <br> Uva; <br> Maçã; <br> Abacaxi; <br> Acerola."
+  }, 
+
+   aguasaborizada: {
+    nome: "Água Saborizada",
+    descricao: "Água leve e refrescante, com toques naturais de frutas e ervas. <br> <br> <strong>OPÇÕES: <BR> </strong> Limão e Hortelã; <br> Laranja e Gemgibre; <br> Pepino e limão-siciliano; <br> Abacaxi e Hortelã. "
+  },
+ 
+  
 };
 
 document.addEventListener('click', (e) => {
