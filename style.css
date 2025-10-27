@@ -16,6 +16,16 @@
   src: url("ArsenicaTrial-Medium.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Maglisto";
+  src: url("Maglisto.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Payback";
+  src: url("Payback.otf") format("opentype");
+}
+
 * {
   margin: 0;
   padding: 0;

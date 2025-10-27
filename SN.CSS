@@ -1,0 +1,166 @@
+:root {
+--card:#bb9c74;
+  --marrom-claro: #743E17;
+  --marrom-principal: #351c0a;
+  --verde: #366638;
+  --fundo: #ccb392;
+
+}
+@font-face {
+  font-family: "Narnia";
+  src: url("Narnia.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Arsenica";
+  src: url("ArsenicaTrial-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Maglisto";
+  src: url("Maglisto.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Payback";
+  src: url("Payback.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  background-color: var(--fundo);
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  backdrop-filter: blur(3px);
+  background:#583c27;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.);
+}
+.logo img {
+  height: 50px;
+  width: auto;
+  align-items: flex-start;
+}
+
+nav a {
+  color: var(--fundo);
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-left: 40px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+}
+
+nav a:hover{
+   transform: scale(1.5);
+   color: var(--marrom-principal);
+   font-family: "raleway";
+   font-weight: bold;
+  text-shadow: 0 8px 20px;
+}
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 12px;
+    font-size: 4rem;
+    font-weight: 200;
+    font-family: "Payback", serif;
+    color: #351c0a;
+}
+ 
+.bloco {
+  display: flex;
+  align-items: center;
+  width: 100%; /* ocupa toda a largura da tela */
+  max-width: none; /* remove limite para a largura */
+  margin: 60px 0; /* só margem vertical */
+  padding: 0; /* sem padding horizontal */
+}
+
+.bloco.esquerda {
+  justify-content: flex-start; /* imagem à esquerda */
+}
+
+.bloco.direita {
+  justify-content: flex-end; /* imagem à direita */
+  flex-direction: row-reverse; /* texto à esquerda da imagem */
+}
+
+.bloco img {
+  width: 30%; /* ou ajuste conforme necessidade */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  object-fit: cover;
+  display: block;
+}
+
+.bloco.esquerda img {
+  margin-left: 0; /* encosta na borda esquerda */
+}
+
+.bloco.direita img {
+  margin-right: 0; /* encosta na borda direita */
+}
+
+.bloco p {
+  width: 45%;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 20px; /* espaço entre texto e imagem */
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .bloco {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bloco img, .bloco p {
+    width: 100%;
+  }
+}
+
+
+.ong {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.ong button {
+  background-color: #366638;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.ong button:hover {
+  background-color: #2c4f2c;
+}
+
+

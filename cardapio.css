@@ -16,6 +16,16 @@
   src: url("ArsenicaTrial-Medium.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Maglisto";
+  src: url("Maglisto.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Payback";
+  src: url("Payback.otf") format("opentype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -70,8 +80,9 @@ h1 {
     justify-content: center;
     margin-top: 50px;
     font-size: 4rem;
-    font-weight: 200;
-    font-family: "Narnia", serif;
+    font-weight: 100;
+    font-style: italic;
+    font-family: "payback", sans-serif;
     color: #351c0a;
 }
 
