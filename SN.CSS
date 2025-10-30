@@ -75,92 +75,134 @@ nav a:hover{
   text-shadow: 0 8px 20px;
 }
 
-
-h1 {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    margin-left: 12px;
-    font-size: 4rem;
-    font-weight: 200;
-    font-family: "Payback", serif;
-    color: #351c0a;
+.titulo {
+  text-align: center;
+  margin-top: 50px;
 }
- 
-.bloco {
+
+.titulo h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: var(--marrom-principal);
+  font-family: 'payback', sans-serif;
+  font-weight: 200;
+  font-size: 4rem;
+}
+
+main {
   display: flex;
   align-items: center;
-  width: 100%; /* ocupa toda a largura da tela */
-  max-width: none; /* remove limite para a largura */
-  margin: 60px 0; /* só margem vertical */
-  padding: 0; /* sem padding horizontal */
+  justify-content: space-between;
+  margin: 80px 0;
+  padding: 10px 50px 10px 60px; 
 }
 
-.bloco.esquerda {
-  justify-content: flex-start; /* imagem à esquerda */
+
+.textoprincipal {
+  flex: 1;
+  max-width: 550px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  text-align: justify;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
 }
 
-.bloco.direita {
-  justify-content: flex-end; /* imagem à direita */
-  flex-direction: row-reverse; /* texto à esquerda da imagem */
-}
-
-.bloco img {
-  width: 30%; /* ou ajuste conforme necessidade */
+.textoprincipal:hover {
+  transform: scale(1.05);
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-shadow: 0 5px 20px #351c0a;
+  text-align: justify;
+  color: ;
+}
+
+
+
+.imagens {
+  position: relative;
+  width: 450px;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 15px; 
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.imagens img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  display: block;
+  opacity: 0;
+  animation: trocar 8s infinite;
+  transition: opacity 0.5s ease;
 }
 
-.bloco.esquerda img {
-  margin-left: 0; /* encosta na borda esquerda */
+.imagens img:nth-child(1) {
+  animation-delay: 0s;
+}
+.imagens img:nth-child(2) {
+  animation-delay: 4s;
 }
 
-.bloco.direita img {
-  margin-right: 0; /* encosta na borda direita */
+.imagens:hover{
+ transform: scale(1.1);
+  color: var(--marrom-principal);
+  box-shadow: 0 8px 50px #743E17;
 }
 
-.bloco p {
-  width: 45%;
+@keyframes trocar {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  40% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+.botao {
+  text-align: center;
+  width: 100%;
+}
+
+.botao p {
   font-size: 1.1rem;
-  line-height: 1.6;
-  margin: 0 20px; /* espaço entre texto e imagem */
+  margin-bottom: 0px;
+  color: var(--marrom-principal);
+  font-weight: 700;
+}
+
+.botao button {
+  background-color: var(--verde);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.botao button:hover {
+  background-color: var(--marrom-claro);
+  transform: scale(1.05);
 }
 
 
-
-
-
-@media (max-width: 768px) {
-  .bloco {
+@media (max-width: 900px) {
+  main {
     flex-direction: column;
+    padding: 0 30px;
+  }
+
+  .textoprincipal {
+    max-width: 100%;
     text-align: center;
   }
 
-  .bloco img, .bloco p {
+  .imagens {
     width: 100%;
+    height: 250px;
+    margin-right: 0;
   }
 }
-
-
-.ong {
-  text-align: center;
-  margin: 80px 0;
-}
-
-.ong button {
-  background-color: #366638;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 25px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.ong button:hover {
-  background-color: #2c4f2c;
-}
-
-
